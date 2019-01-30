@@ -11,14 +11,17 @@ Follow the instructions line-by-line.
 ==========
 1. Open a new terminal window.
 ----------
-
+owner@DESKTOP-98DV69J MINGW64 ~
 ==========
 2. Create a directory called mtec1002.
 ----------
-
+$ mkdir mtec1002
 ==========
 3. Change your directory so that you're in mtec1002.
 ----------
+$ cd mtec1002/
+
+owner@DESKTOP-98DV69J MINGW64 ~/mtec1002
 
 ==========
 4. Type:
@@ -31,9 +34,8 @@ If it doesn't start at #1 again, or ask for help before moving on!
 
 Copy and paste the output of pwd below.
 ----------
-
-
-
+$ pwd
+/c/Users/owner/mtec1002
 ==========
 5. Type:
 
@@ -42,8 +44,11 @@ $ ls
 
 Copy and paste the output below.
 ----------
+$ mkdir animals
 
-
+owner@DESKTOP-98DV69J MINGW64 ~/mtec1002
+$ ls
+animals/
 
 ==========
 6. Type:
@@ -53,9 +58,11 @@ $ ls
 
 Copy and paste the output below.
 ----------
+$ mkdir food
 
-
-
+owner@DESKTOP-98DV69J MINGW64 ~/mtec1002
+$ ls
+animals/  food/
 ==========
 7. Type:
 
@@ -64,8 +71,11 @@ $ ls
 
 Copy and paste the output below.
 ----------
+$ mkdir -p foo/bar/baz/qux
 
-
+owner@DESKTOP-98DV69J MINGW64 ~/mtec1002
+$ ls
+animals/  foo/  food/
 
 ==========
 8. Type:
@@ -75,8 +85,11 @@ $ pwd
 
 Copy and paste the output below.
 ----------
+$ cd foo/bar/baz/qux
 
-
+owner@DESKTOP-98DV69J MINGW64 ~/mtec1002/foo/bar/baz/qux
+$ pwd
+/c/Users/owner/mtec1002/foo/bar/baz/qux
 
 ==========
 9. Type:
@@ -86,8 +99,11 @@ $ pwd
 
 Copy and paste the output below.
 ----------
+$ cd ../..
 
-
+owner@DESKTOP-98DV69J MINGW64 ~/mtec1002/foo/bar
+$ pwd
+/c/Users/owner/mtec1002/foo/bar
 
 ==========
 10. Type:
@@ -97,8 +113,12 @@ $ pwd
 
 Copy and paste the output below.
 ----------
+$ cd -
+/c/Users/owner/mtec1002/foo/bar/baz/qux
 
-
+owner@DESKTOP-98DV69J MINGW64 ~/mtec1002/foo/bar/baz/qux
+$ pwd
+/c/Users/owner/mtec1002/foo/bar/baz/qux
  
 ==========
 11. Type:
@@ -108,8 +128,11 @@ $ pwd
 
 Copy and paste the output below.
 ----------
+$ cd ../../../..
 
-
+owner@DESKTOP-98DV69J MINGW64 ~/mtec1002
+$ pwd
+/c/Users/owner/mtec1002
 
 ==========
 12. Type:
@@ -120,8 +143,22 @@ $ ls -l
 
 Copy and paste the first two lines from the output into the space below.
 ----------
+$ ls -l
+total 0
+drwxr-xr-x 1 owner 197121 0 Jan 29 19:03 animals/
+drwxr-xr-x 1 owner 197121 0 Jan 29 19:05 foo/
+drwxr-xr-x 1 owner 197121 0 Jan 29 19:04 food/
 
+$ rmdir animals
 
+owner@DESKTOP-98DV69J MINGW64 ~/mtec1002
+$ ls
+foo/  food/
+
+$ ls -l
+total 0
+drwxr-xr-x 1 owner 197121 0 Jan 29 19:05 foo/
+drwxr-xr-x 1 owner 197121 0 Jan 29 19:04 food/
 
 ==========
 13. Type:
@@ -131,9 +168,11 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
+$ cd ~
 
-
-
+owner@DESKTOP-98DV69J MINGW64 ~
+$ pwd
+/c/Users/owner
 ==========
 14. Type:
 
@@ -153,8 +192,12 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
+$ cd /unknown_folder
+bash: cd: /unknown_folder: No such file or directory
 
-
+owner@DESKTOP-98DV69J MINGW64 ~
+$ pwd
+/c/Users/owner
 
 ==========
 15. Type:
@@ -164,9 +207,11 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
+$ cd ~/mtec1002
 
-
-
+owner@DESKTOP-98DV69J MINGW64 ~/mtec1002
+$ pwd
+/c/Users/owner/mtec1002
 ==========
 16. Type:
 
@@ -174,13 +219,13 @@ $ hostname
 
 Copy and paste the output into the space below.
 ----------
-
-
+$ hostname
+DESKTOP-98DV69J
 
 ==========
 17a. Make sure you're back in your mtec1002, which should be in your home folder.  What command would you use to find out if you're in the right folder?  Write the command below, then run it.
 ----------
-
+pwd
 
 
 ==========
@@ -204,14 +249,14 @@ lemon
 Use only one command to make all of these new directories.  Write what command you used below:
 ----------
 
-
+mkdir -p pineapple/orange/strawberry/lemon
 
 ==========
 19. Make another directory called aardvark.  
 
 Write the command you used to create the directory below:
 ----------
-
+mkdir aardvark
 
 
 ==========
@@ -232,7 +277,7 @@ What is the modified date of the aardvark directory?
 What command did you use?
 ----------
 
-
+mkdir -p foo/bar/baz
 
 ==========
 22. Change your directory so that you're in the inner most directory (baz)
@@ -240,51 +285,52 @@ What command did you use?
 What command did you use?
 ----------
 
-
+cd bar
 
 ==========
 23. Change your directory so that you're two directories up (foo)
 
 What command did you use?
 ----------
-
+cd ../..
 
 ==========
 24. What command is used to delete empty directories?
 ----------
 
-
+rmdir
 
 ==========
 25. What command is used to print out your current working directory?
 ----------
-
+pwd
 
 
 ==========
 26. What flag do I pass to ls to print out all files?
 ----------
-
+-A
 
 
 ==========
 27. What's the shortcut for home directory?
 ----------
-
+/
 
 
 ==========
 28. What's a pathname?
 ----------
-
+A pathname is basically the location of a file or folder you are trying to reach
 
 
 ==========
 29. What's a directory?
 ----------
-
+A directory is a location for storing files on a computer.
 
 
 ==========
 30. What's the *absolute* path (full path, starting at root) to your user's Downloads directory?
 ----------
+An absolute path would start as http://word/other word / etc
